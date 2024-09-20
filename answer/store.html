@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Mechanisms Comparison</title>
+</head>
+
+<body>
+    <h2>Cookie, LocalStorage, SessionStorage Comparison</h2>
+
+    <h3>1. Cookie:</h3>
+    <ul>
+        <li><strong>生命周期:</strong> 由服务器设置，可以指定过期时间，可以是会话级别（浏览器关闭即失效）或持久性的。</li>
+        <li><strong>存储容量:</strong> 通常最大为4KB。</li>
+        <li><strong>与服务器通信:</strong> 每次请求都会携带在请求头中，会增加网络流量。</li>
+    </ul>
+
+    <h3>2. LocalStorage:</h3>
+    <ul>
+        <li><strong>生命周期:</strong> 永久性存储，除非被用户手动清除，否则一直存在。</li>
+        <li><strong>存储容量:</strong> 通常为5MB。</li>
+        <li><strong>与服务器通信:</strong> 不参与，完全在客户端存储。</li>
+    </ul>
+
+    <h3>3. SessionStorage:</h3>
+    <ul>
+        <li><strong>生命周期:</strong> 仅在当前会话（当前标签页或窗口）有效，关闭标签页或窗口后失效。</li>
+        <li><strong>存储容量:</strong> 通常为5MB。</li>
+        <li><strong>与服务器通信:</strong> 不参与，完全在客户端存储。</li>
+    </ul>
+
+    <h3>Common Points:</h3>
+    <ul>
+        <li>都是在客户端存储数据，提高了网站性能。</li>
+        <li>都是按照同源策略进行限制的，不能跨域访问。</li>
+        <li>都是键值对存储方式。</li>
+    </ul>
+
+    <h3>How to Choose:</h3>
+    <ul>
+        <li>如果需要与服务器通信，并且需要在不同页面之间共享数据，使用 <strong>Cookie</strong>。</li>
+        <li>如果需要在不同页面之间共享数据，并且不需要与服务器通信，使用 <strong>LocalStorage</strong>。</li>
+        <li>如果只需要在当前会话中共享数据，并且不需要与服务器通信，使用 <strong>SessionStorage</strong>。</li>
+        <li>如果需要存储的数据较大，使用 <strong>LocalStorage</strong> 或 <strong>SessionStorage</strong>，而不使用 <strong>Cookie</strong>。
+        </li>
+    </ul>
+</body>
+
+</html>

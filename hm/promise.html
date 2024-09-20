@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            //异步操作
+            //待定pending
+        }).then(result => {
+            //已兑现fulfilled
+        }).catch(error => {
+            //已拒绝rejected
+        })
+
+        //手写promise
+        //通过变量保持状态便于使用
+        const PENDING = 'pending'
+        const FULFILLED = 'fulfilled'
+        const REJECTED = 'rejected'
+        //定义类
+        class promising {
+            //添加状态
+            stste = PENDING
+            //添加原因
+            result = undefined
+            //添加构造函数
+            constructor(func) {
+                //定义resolve、reject
+                //修改状态:pending->fulfilled, 记录原因
+                const resolve = (result) => {
+                    // console.log('resolve running', result);
+                    if (this.state === PENDING) {//状态不可逆
+                        this.state = FULFILLED
+                        this.result = result
+                    }
+                }
+                //修改状态:pending->rejected, 记录原因
+                const reject = (error) => {
+                    // console.log('reject running', error);
+                    if (this.state === PENDING) {//状态不可逆
+                        this.state = REJECTED
+                        this.result = result
+                    }
+                }
+                //执行传入的回调函数
+                func(resolve, reject)
+            }
+            //添加实例方法
+            then(onFulfilled, onRejected) {
+
+            }
+        }
+
+        const pi = new promising((resolve, reject) => {
+            resolve('success')//修改状态:pending->fulfilled
+            reject('error')//修改状态:pending->rejected
+        })
+        pi.then(
+            res => {
+                console.log('回调成功', res);
+            },
+            err => {
+                console.log('回调失败', err);
+            })
+    </script>
+</body>
+
+</html>

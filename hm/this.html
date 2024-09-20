@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(this);//window
+        function fn() {
+            console.log(this);//window
+        }
+        fn()
+        function fn2() {
+            'use strict'
+            console.log(this);//undefined
+        }
+        fn2()
+        const chino = {
+            name: 'chino',
+            doi() {
+                console.log(this);
+            }
+        }
+        chino.doi()//chino
+
+        //call,apply,bind 改变this指向
+        function fn3(n1, n2) {
+            console.log(this);
+            console.log(n1, n2);
+        }
+        const lolicon = {
+            name: 'lolicon'
+        }
+        fn3.call(lolicon, 1, 2)//lolicon
+        fn3.apply(lolicon, [3, 4])//lolicon
+        const doBind = fn3.bind(lolicon, 5, 6)
+        doBind()//lolicon
+
+        const ppgod = {
+            name: 'ppgod',
+            do() {
+                console.log(this);//ppgod
+                setTimeout(() => {
+                    console.log(this);// ppgod 箭头函数this上级作用域
+                }, 1000);
+            }
+        }
+        ppgod.do()
+    </script>
+</body>
+
+</html>

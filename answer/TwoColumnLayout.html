@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怎么实现两栏布局</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 70%;
+        }
+    </style>
+        <script>
+            // 在页面加载完成后执行
+            window.onload = function () {
+                // 获取所有链接
+                var links = document.getElementsByTagName('a');
+                // 遍历链接，并设置 target 为 "_blank"
+                for (var i = 0; i < links.length; i++) {
+                    links[i].target = '_blank';
+                }
+            };
+        </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>怎么实现两栏布局</h1>
+        <a href="./TwoColumnLayout/float.html">浮动布局</a>
+        <a href="./TwoColumnLayout/flex.html">Flex布局</a>
+    </div>
+</body>
+
+</html>
+
+

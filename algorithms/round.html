@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findLastRemainingElement(n, k) {
+            // 创建一个包含1到n的数组，表示元素的初始序号
+            let elements = Array.from({ length: n }, (_, index) => index + 1);
+
+            // 初始化当前位置为k-1，因为数组是从0开始的
+            let currentPosition = k - 1;
+
+            while (elements.length > 1) {
+                // 删除当前位置的元素
+                elements.splice(currentPosition, 1);
+
+                // 更新当前位置
+                currentPosition = (currentPosition + k - 1) % elements.length;
+            }
+
+            // 返回最后留下的元素的初始序号
+            return elements[0];
+        }
+
+        // 例子：元素个数为5，序号为2的元素出列
+        const n = 6;
+        const k = 3;
+        const result = findLastRemainingElement(n, k);
+        console.log("最后留下的元素的初始序号是：" + result);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见HTTP请求方法介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <h1>常见HTTP请求方法介绍</h1>
+
+    <h2>GET：</h2>
+    <p>
+        <strong>用途：</strong> 请求指定的资源。<br>
+        <strong>场景：</strong> 用于获取静态内容，如页面、图像、文档等。它是无害的，只从服务器获取数据而不做其他修改。
+    </p>
+
+    <h2>POST：</h2>
+    <p>
+        <strong>用途：</strong> 向指定资源提交数据，用于处理提交的数据并生成响应。<br>
+        <strong>场景：</strong> 常用于提交表单数据、上传文件、进行登录等需要向服务器提交数据的操作。可能会引起服务器状态的改变。
+    </p>
+
+    <h2>PUT：</h2>
+    <p>
+        <strong>用途：</strong> 将请求的数据存储到指定的位置，覆盖原有资源。<br>
+        <strong>场景：</strong> 主要用于更新已存在的资源。例如，通过PUT可以上传一个文件到指定的URI，并覆盖已存在的文件。
+    </p>
+
+    <h2>DELETE：</h2>
+    <p>
+        <strong>用途：</strong> 请求服务器删除指定的资源。<br>
+        <strong>场景：</strong> 用于删除服务器上的资源。但要注意，DELETE请求并不一定会导致实际的删除，具体实现取决于服务器。
+    </p>
+
+    <h2>PATCH：</h2>
+    <p>
+        <strong>用途：</strong> 对资源进行部分修改。<br>
+        <strong>场景：</strong> 用于对资源进行局部更新，而不是整个资源。可以避免PUT的完全替换，只更新部分字段。
+    </p>
+
+    <h2>HEAD：</h2>
+    <p>
+        <strong>用途：</strong> 类似于GET请求，但服务器只返回响应头，不返回实体主体。<br>
+        <strong>场景：</strong> 用于获取资源的元信息，而不需要实际的资源内容。常用于检查资源的状态以及验证缓存。
+    </p>
+
+    <h2>OPTIONS：</h2>
+    <p>
+        <strong>用途：</strong> 获取目标资源支持的通信选项。<br>
+        <strong>场景：</strong> 在进行跨域请求时，客户端可以使用OPTIONS请求来确定服务器支持的方法和头部，以确保安全性。
+    </p>
+
+    <h2>TRACE：</h2>
+    <p>
+        <strong>用途：</strong> 回显服务器收到的请求，用于测试或诊断。<br>
+        <strong>场景：</strong> 不常用，用于追踪请求在代理服务器上的传输过程，检查是否有中间步骤修改了请求。
+    </p>
+
+    <h2>CONNECT：</h2>
+    <p>
+        <strong>用途：</strong> 要求在代理服务器之间建立隧道，通常用于加密连接。<br>
+        <strong>场景：</strong> 主要用于代理服务器之间的通信，通常与HTTPS一起使用，以建立安全的加密连接。
+    </p>
+</body>
+</html>

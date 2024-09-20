@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP vs HTTPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTTP vs HTTPS</h2>
+
+    <h3>1. 安全性：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>是一种不安全的协议，传输的数据未加密，容易被窃听和篡改。</li>
+        <li><strong>HTTPS：</strong>是一种安全的协议，通过使用TLS/SSL协议对数据进行加密。</li>
+    </ul>
+
+    <h3>2. 加密方式：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>数据以明文形式传输，不经过加密处理。</li>
+        <li><strong>HTTPS：</strong>使用TLS或SSL协议对数据进行加密。</li>
+    </ul>
+
+    <h3>3. 端口号：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>默认端口号为80。</li>
+        <li><strong>HTTPS：</strong>默认端口号为443。</li>
+    </ul>
+
+    <h3>4. URL：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>URL以<code>http://</code>开头。</li>
+        <li><strong>HTTPS：</strong>URL以<code>https://</code>开头。</li>
+    </ul>
+
+    <h3>5. 证书：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>不需要使用数字证书。</li>
+        <li><strong>HTTPS：</strong>需要使用由权威证书机构颁发的数字证书。</li>
+    </ul>
+
+    <h3>6. 使用场景：</h3>
+    <ul>
+        <li><strong>HTTP：</strong>适用于不涉及敏感信息的场景，如普通网页的访问。</li>
+        <li><strong>HTTPS：</strong>适用于需要保护用户隐私和敏感信息的场景，如登录、支付等。</li>
+    </ul>
+</body>
+
+</html>

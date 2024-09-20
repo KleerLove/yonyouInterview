@@ -1,0 +1,45 @@
+<!-- Flex布局 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout - Flex</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .main-content {
+            flex: 70%;
+            height: 1000px;
+            background-color: skyblue;
+        }
+
+        .sidebar {
+            flex: 30%;
+            height: 1000px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <p>Main Content</p>
+        </div>
+        <div class="sidebar">
+            <p>Sidebar</p>
+        </div>
+    </div>
+</body>
+
+</html>

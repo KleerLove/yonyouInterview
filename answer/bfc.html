@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解bfc吗？怎么解决高度塌陷问题</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>了解bfc吗？怎么解决高度塌陷问题</h1>
+        <p>BFC规范，即块级格式化上下文(block formatting context)</p>
+        <p>是一个页面中的一块渲染区域，并且有一套渲染规则，规定了内部的块级盒子如何布局，并且与这个区域外部毫不相干</p>
+        <p>设置 overflow 属性为非 visible 的值</p>
+        <p>设置元素的 float 属性为非 none 的值</p>
+        <p>将元素的 display 属性设置为 inline-block、table-cell、flex、grid 等</p>
+        <p>将元素的 position 属性设置为 absolute 或 fixed</p>
+    </div>
+</body>
+</html>

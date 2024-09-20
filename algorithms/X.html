@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printDiagonalStars(size) {
+            for (let i = 0; i < size; i++) {
+                let row = '';
+                for (let j = 0; j < size; j++) {
+                    // 在两条对角线上放置星号
+                    if (i === j || i === size - 1 - j) {
+                        row += '*';
+                    } else {
+                        row += ' ';
+                    }
+                }
+                console.log(row);
+            }
+        }
+
+        // 调用函数并传递正方形的大小
+        printDiagonalStars(19);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interview list</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 70%;
+            /* max-width: 800px; */
+            /* 可选，限制最大宽度 */
+        }
+
+        a:hover {
+            color: red;
+        }
+    </style>
+    <script>
+        // 在页面加载完成后执行
+        window.onload = function () {
+            // 获取所有链接
+            var links = document.getElementsByTagName('a');
+            // 遍历链接，并设置 target 为 "_blank"
+            for (var i = 0; i < links.length; i++) {
+                links[i].target = '_blank';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>HTML&&CSS</h1>
+            <ul>
+                <h4>css布局</h4>
+                <li><a href="./answer/bfc.html">了解bfc吗?怎么解决高度塌陷问题</a>*4</li>
+                <li>一个盒子在另一个盒子里，子盒子的高度是50px，父亲盒子的高度却是0，没被撑起来，为什么(高度塌陷问题)</li>
+                <li><a href="https://chat.openai.com/share/2ef24567-1aeb-4f11-8fd7-cf7f155b4a2c">flex布局?</a></li>
+                <li>一排内容想要靠左靠上对齐怎么写属性?;(align-items: flex-start)</li>
+                <li>三个div前两个同行后一个一行怎么实现;(flex-basis)</li>
+                <li><a href="https://chat.openai.com/share/4adec53a-4ece-46bb-a8a3-38f5af4a0d64">grid布局?</a>(网格)</li>
+                <li><a href="./answer/TwoColumnLayout.html">怎么实现两栏布局</a>*2(display: flex/overflow: hidden)</li>
+                <li><a href="https://chat.openai.com/share/4fd861e7-e8da-45aa-98a9-8981d7f7bc9f">垂直居中方法;</a>(display:
+                    flex && align-items: center / grid / 绝对定位)</li>
+                <li><a href=""></a>不确定盒子宽高怎么实现垂直居中;(绝对定位position: absolute && transform: translate(-50%, -50%))</li>
+
+                <h4>CSS3动画</h4>
+                <li><a href="./answer/css3Animation.html">写CSS3动画的流程</a>*3</li>
+                <li><a
+                        href="https://chat.openai.com/share/78d27448-aba7-4ec9-8401-b241693e7875">animation和transition使用场景</a>
+                </li>
+                <li>用过transform吗(transform 是 CSS 中的一个属性，用于对元素进行变换(旋转、缩放、平移等)的操作)</li>
+                <h4>css others</h4>
+                <li><a href="https://chat.openai.com/share/258459c2-b8cf-4ce2-8172-1ec7f9ffc8bd">css3新特性</a></li>
+                <li><a href="https://chat.openai.com/share/c0196308-4027-4b7b-8e3b-c3c3e0b24f74">css块级元素，内联元素</a></li>
+                <li><a href="https://chat.openai.com/share/92f728d9-eb3a-414b-b5b2-c886ae569826">一个hover怎么控制两个元素</a>
+                </li>
+                <li><a href="https://chat.openai.com/share/b7d746a1-c811-4c82-8ea6-49548bcf28cd">css优先级</a></li>
+
+                <h4>html</h4>
+                <li><a href="https://chat.openai.com/share/62317a73-1e33-4ca7-8ba7-9d77ac8f08aa">了解渐进式渲染和流式渲染嘛</a></li>
+                <li><a href="https://chat.openai.com/share/950ad46b-41ec-48bb-b529-b3632bb7f027">html5新特性</a></li>
+                <li><a href="https://chat.openai.com/share/5c60ffc0-650e-4d35-b3ab-1f315d6b76e6">html meta标签</a></li>
+
+                <h4>存储</h4>
+                <li><a
+                        href="https://chat.openai.com/share/9356ae17-c3c7-4954-ae92-eec8fb45c196">url相同不同tab页的sessionStorage共享吗，修改了一个tab页的sessionStorage另一个tab页会更改吗</a>(不共享，不会);
+                </li>
+                <li><a
+                        href="https://chat.openai.com/share/c1a7aa6a-c6d8-4999-b9db-313d9fe2e79f">怎么实现页面的缓存的具体一些;强制缓存、协商缓存;</a>
+                </li>
+                <li><a
+                        href="https://chat.openai.com/share/4b14cf43-fbef-4e35-b6a7-ec6712a417e3">cookie、LocalStorage、SessionStorage的区别</a>*5
+                </li>
+                <li><a
+                        href="https://chat.openai.com/share/0a5c90f3-6ad3-4751-bab8-d6b0b952c311">localStorage存储比较大对性能有影响吗</a>(不清楚，面试官说影响首屏渲染速度)
+                </li>
+                <li><a
+                        href="https://chat.openai.com/share/599507e4-3874-4c54-9ca9-b3133d35c636">localStorage怎么监听修改</a>(就storage事件)
+                </li>
+                <li><a href="https://chat.openai.com/share/f2f03d2a-bd62-4d9e-9bee-f6e4a699a7ab">cookie 中的 http-only
+                        有什么用</a></li>
+
+                <h4>http网络</h4>
+                <li><a href="https://chat.openai.com/share/5f2a33e6-7bb1-48a0-93ea-48636610ba8c">http </a>状态码</li>
+                <li>HTTP协议了解吗，每次新版本出现都解决了什么问题</li>
+                <li>HTTPS 建立连接的过程</li>
+                <li>http协议缓存</li>
+                <li><a href="./answer/HTTPVersionsComparison.html">http各版本(1.0/1.1/2.0)的区别*3</a></li>
+                <li>https加密算法</li>
+                <li><a href="./answer/httpAndHttps.html">https和http区别，说一下具体过程;*3</a></li>
+                <li><a href="./answer/httpRequest.html">你了解常见的请求方法有那种?具体介绍一下每一种方法的场景;</a></li>
+                <li>http请求类型，怎么判断什么情景什么请求;</li>
+                <li>options请求见过吗?;什么情况下会发options请求;</li>
+                <li>get、post的区别</li>
+
+                <h4>others</h4>
+                <li><a href="https://chat.openai.com/share/7892048c-4a29-4e4c-8d98-ab3bfadc9afa">跨域如何解决?</a>*5;</li>
+                <li>说了nginx，postMessage，浏览器加flag，access-control-allow-origin，问实习中遇到的跨域怎么解决(后端搞代理)，问我jsonp了解吗，我表示这技术过时了;
+                </li>
+                <li>iframe跨域，postMassage，其他标签页通信的方式。document.domain?</li>
+                <li><a href="https://chat.openai.com/share/9397bbf0-3a17-4a38-a854-e824c2cb4409">静态资源的请求是并行请求，还是串行请求</a>(并行)
+                </li>
+                <li>移动端首页白屏是什么问题，如何解决</li>
+            </ul>
+        </div>
+        <div>
+            <h1>javascript</h1>
+            <ul>
+                <h4>数组</h4>
+                <li><a href="https://chat.openai.com/share/dfaf674e-7e4e-48a8-a3e1-4f20b28bd190">常用的数组操作</a>*2</li>
+                <li><a href=""></a>forEach和map区别*3(还提到了数组和对象的遍历顺序区别?对象无序，数组有序)</li>
+                <li><a href=""></a>判断数组类型的方法有哪些;如何判断是否是一个数组(Array.isArray()和Object.prototype.toString.call)</li>
+                <li><a href=""></a>js做数据循环用了哪些方法，如何实现的，这些方法哪种性能最好，哪种最不好</li>
+                <li><a href=""></a>数组扁平化</li>
+                <li><a href=""></a>js哪些操作会改变原数组</li>
+                <li><a
+                        href="https://chat.openai.com/share/c39a256e-a69c-4b1f-bfbd-6857e4c45e90">手写filter函数,手写filter方法</a>
+                </li>
+
+                <h4>数据类型</h4>
+                <li><a href="https://chat.openai.com/share/88a8eca5-5fab-4e93-9762-55388019de0d">数据类型，判断数据类型</a>js*3;
+                </li>
+                <li><a href=""></a>js数据类型，基本数据和引用数据类型(跟内存有关吗，提到了栈、堆)*2</li>
+                <li><a href=""></a>堆栈区别；</li>
+                <li><a href="https://chat.openai.com/share/1d837c0a-2070-4fdb-93cd-b28d44c3b698">getdocumentbyid
+                        和byclass返回值的区别</a></li>
+                <li><a href="https://chat.openai.com/share/220c7a1f-816b-4055-9768-b2460be99b45">怎么去把一个字符串反转</a><a
+                        href="./answer/reverseArr.html">&nbspcode</a></li>
+                <li><a href="https://chat.openai.com/share/725dd7ab-7192-495b-bf3f-f07ed3666df0">undefined ==
+                        null，输出什么</a>(true)</li>
+                <li><a href=""></a>undefied 和 null，怎么判断是undefied；</li>
+                <li><a href=""></a>(1+undefined)和(1+null)的结果一样吗(不一样，NaN/1)</li>
+
+                <h4>闭包</h4>
+                <li><a href="https://chat.openai.com/share/91a58fd7-9217-422e-b74e-6883d0707dba">闭包的好处和坏处，如何避免缺点</a>*7;
+                </li>
+                <li>闭包，太多闭包导致内存泄露，你有什么方法;</li>
+                <li>简述一下闭包是什么(我回答的闭包的概念，但感觉面试官想让我答的是闭包的作用);</li>
+
+                <h4>ES6</h4>
+                <li><a href="https://chat.openai.com/share/dcb95c95-0563-4ba4-808b-d2a79845b829">es6特性</a>*7;</li>
+                <li>es5 和 es6 的类的区别;</li>
+                <li>let, const, var区别；</li>
+                <li><a href="https://chat.openai.com/share/989b037a-4d4a-4eb2-b38a-67b1f1ab7da2">变量提升，作用域</a>，给了一个题让说。
+                </li>
+
+                <h4>拷贝</h4>
+                <li><a href="https://chat.openai.com/share/ab0db551-ed81-4154-bff2-1d9d46f5d338">深拷贝怎么写</a>:*4</li>
+                <li>深浅拷贝实现，用JSON方法实现深拷贝的局限性</li>
+
+                <h4>事件机制</h4>
+                <li><a href="https://chat.openai.com/share/8075afda-f6f5-4d90-856e-b504062203c3">事件机制</a></li>
+                <li>事件机制，冒泡和捕获；</li>
+                <li>事件委托,事件绑定,事件解绑；</li>
+
+                <h4>axios</h4>
+                <li><a href="https://chat.openai.com/share/20de811b-36f3-47af-8030-4480f136b161">ajax 和 axios
+                    </a>是干什么的，有哪些应用*4;</li>
+                <li>如果没有axios， ajax发送请求的过程;(XMLHttpRequest)</li>
+                <li>axios用过吗?如果想要在请求或响应中做改变怎么办?(transform或者拦截器);</li>
+                <li>axios库的原理;(基于Promise的HTTP客户端库)</li>
+                <li>在axios拦截中都怎么做的;</li>
+
+                <h4>同步异步</h4>
+                <li><a href="https://chat.openai.com/share/6c751b07-9709-46c3-becb-b7d9e940dc5d">平时怎么写异步编程的</a>;</li>
+                <li>发送异步请求的方式：除了这两个promise和async，还有没有更底层一些的请求方式(回调函数/事件监听)</li>
+                <li>异步与多线程有没有关系，是不是并发执行的过程?</li>
+                <li>js 异步历史聊一下</li>
+                <li>JS为什么是单线程的, 浏览器还有什么什么线程</li>
+                <li>简述事件循环Event Loop机制(同步，微，宏)*2;</li>
+                <li>看代码输输出，宏任务微任务;</li>
+
+                <h4>promise</h4>
+                <li><a href="https://chat.openai.com/share/45892444-c9ee-4fc5-bd52-7c7fe83c561c">说说 Promise</a>*2;</li>
+                <li>async await和promise区别;</li>
+                <li>Promise 和 setTimeout 哪个先执行;(promise)</li>
+                <li>promise常用的几种静态方法;</li>
+                <li>Promise，手写 promise.all*2;</li>
+                <li>promise，promise.all, promise.race, promise.allSettled;</li>
+                <li>forEach里面写一个async await可以阻塞吗(不可以，相当于创建了n个async函数)</li>
+
+                <h4>node.js</h4>
+                <li><a href="https://chat.openai.com/share/414e7bb4-d170-4ad0-b555-7525ea08a5ec">node</a>掌握情况*2</li>
+                <li>nodejs 的 path模块一些api——path join和resolve的区别</li>
+                <li>nodejs常用模块</li>
+                <li>用过webpack、node.js吗?*2</li>
+                <li>node 的 generator知道吗?</li>
+
+                <h4>webpack</h4>
+                <li><a href="https://chat.openai.com/share/fe5f2270-138a-4281-9a2f-cbdf7f5827eb">webpack</a>的几大模块</li>
+                <li> webpack 构建流程中loader之后的结果</li>
+                <li>插件(Plugin)是用于扩展 webpack 功能的工具,plugin手写过吗</li>
+                <li>webpack的打包流程?loader和plugin是什么?假如我想要去除重复依赖怎么做?(splitChunk?类似的插件)</li>
+                <li>webpack 优化，首屏优化</li>
+                <li>webpack 使用过哪些，如何减小包大小</li>
+                <li><a href="https://chat.openai.com/share/e217747d-7326-4790-8f65-95041e19c451">简述一下npm build的打包过程</a>
+                </li>
+
+                <h4>others</h4>
+                <li><a href="https://chat.openai.com/share/93ed68ae-e540-4bf2-a877-d7f886e99b44">简述js原型链及其作用</a>*5</li>
+                <li><a href="https://chat.openai.com/share/06306d47-58b7-41fc-acbe-8e9cee3793ad">防抖和节流</a>*3</li>
+                <li><a
+                        href="https://chat.openai.com/share/e5b925a7-6bc7-4135-aac7-d2dc9fcb3b30">改变this指向。call、bind、apply区别</a>*2
+                </li>
+                <li><a href="https://chat.openai.com/share/d90ba008-5941-4c3b-8000-ea06e3ff4ab3">js实现继承有哪些方式</a>*2</li>
+                <li><a href="https://chat.openai.com/share/f4b3d12e-08d0-4b2d-82c2-f6f34390c3a3">echarts
+                    </a>用过哪些(饼图、k线图);Echarts的原理;</li>
+                <li><a href=""></a>有用过Echarts吗?假如前端需要显示图表，但由于数据量过大而导致前端出现图表闪烁多次的情况，怎么优化?</li>
+                <li><a href=""></a>setTimeout 的作用，是准时的吗?怎么用于实现setInterval</li>
+                <li><a href="https://chat.openai.com/share/cd3064d6-8a6e-4d18-911e-85e0f5623278">懒加载</a>怎么知道它出现在视口页面</li>
+                <li><a href=""></a>用户多次改变数据1-20连续改变 页面怎么刷新</li>
+                <li><a href=""></a>设计一个sdk实现前端发送的请求前加一个header，无论谁引用sdk，都会加header(偏场景题)面试官给了一个aop埋点的思路</li>
+                <li><a href=""></a>requestAnimationFrame是什么</li>
+                <li><a href=""></a>系统中会有消息的闪烁，这种消息的渲染变化如何实现，(前端如何收到后端通知)答：轮循，websocket</li>
+                <li><a href=""></a>分页请求后端数据，传哪些参数</li>
+                <li><a href=""></a>redux 怎么用的，有什么缺点</li>
+                <li><a href=""></a>无限下拉优化</li>
+                <li><a href=""></a>了解converse吗?</li>
+                <li><a href=""></a>登录逻辑</li>
+            </ul>
+        </div>
+        <div>
+            <h1>vue</h1>
+            <ul>
+                <h4>vue-router</h4>
+                <li><a href="https://chat.openai.com/share/0b0411d4-088e-4853-95c1-92d4f5b6e1bb">vue的编程式路由，路由怎么传参的</a>
+                </li>
+                <li>vue中如何监听到路由地址的变化，怎么实现的?底层基于什么实现的</li>
+
+                <h4>生命周期</h4>
+                <li><a href="https://chat.openai.com/share/d357ce6f-a5d9-4114-bb36-e5ceed752f2b">vue的生命周期</a>*5;</li>
+                <li>简述一下父子组件的生命周期执行顺序*2;</li>
+                <li>要获取dom和数据分别在哪个生命周期;</li>
+
+                <h4>高频</h4>
+                <li><a href="https://chat.openai.com/share/e860d64f-1b8b-4ec1-846f-2dacab674132">组件中通信</a>*7</li>
+                <li><a href="https://chat.openai.com/share/e029af85-70f4-45ad-8c60-aa656e272966">vue2
+                        3区别</a>*6(讲述了object.default property和 proxy)</li>
+                <li><a href="https://chat.openai.com/share/e2187f76-c696-432e-9fe2-b6a6bf293be4">隐藏元素怎么考虑，怎么做</a>*2</li>
+                <li><a href="https://chat.openai.com/share/087c5dd7-e303-4337-8402-c1a053060dab">简述一下diff算法</a>*2</li>
+                <li><a href="https://chat.openai.com/share/26fdf53b-2a25-48e7-aa01-7d242a183b3b">vue的响应式原理</a>*2</li>
+                <li><a href="https://chat.openai.com/share/e1c5f8d3-3c9a-40ea-a508-a054b7f3d515">vue双向绑定源码</a>;</li>
+                <li><a href="https://chat.openai.com/share/54053e1c-36bf-4d1b-bbdb-2e71f33557a7">vue的事件绑定原理</a>;</li>
+                <li><a href="https://chat.openai.com/share/d9e7afc4-e2c1-4767-a3ea-ff8ea6a4d1c5">用过react吗，
+                        vue和react的区别</a>*3</li>
+                <li><a href=""></a>vue的双向数据绑定和react的单向数据区别，优缺点</li>
+                <li><a href=""></a>vue是实时更新数据吗(yes)</li>
+
+                <h4>keep-alive</h4>
+                <li><a href="https://chat.openai.com/share/71b9e30e-9e5d-4eda-8e70-7170cdc93428">简述一下keep-alive的作用</a>;
+                </li>
+                <li>如何更新keep-alive包裹下的子组件的状态;</li>
+
+                <h4>others</h4>
+                <li><a href="https://chat.openai.com/share/ef2e7c16-605a-4d9b-a59a-0ee9426d0061">vue怎么渲染列表的</a>(v-for)
+                </li>
+                <li><a
+                        href="https://chat.openai.com/share/7ecb0f95-e054-4f0f-a589-e3a7c74f5a7a">怎么实现所有组件都可以访问全局变量</a>(vuex/prototype)
+                </li>
+                <li><a href="https://chat.openai.com/share/c70fab70-ba37-45ad-9f51-f6525d3cce21">web首评渲染，ssr</a></li>
+                <li><a href="https://chat.openai.com/share/10747c38-84a0-41f3-b28d-5b876ea89ea7">对组件封装的理解</a></li>
+                <li><a href="https://chat.openai.com/share/40883903-c97f-4e14-9a46-028c37fad7ee">computed和watch</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>技术类</h1>
+            <ul>
+                <h4>高频</h4>
+                <li><a href=""></a>说一下自己做的项目*N</li>
+                <li><a href="https://chat.openai.com/share/5166edd1-9a20-4d72-a978-7b9cb1b1ebbe">浏览器显示页面的整个步骤，越细越好</a>*6
+                </li>
+                <li><a href="https://chat.openai.com/share/49dde244-e4d9-436c-984d-3792b70ff419">了解MVVM MVC
+                        MVP不仅限于这些的JavaScript的开发方式吗</a>;*2</li>
+                <li><a
+                        href="https://chat.openai.com/share/ba5e9847-fd2b-4932-ad66-948b4c6aae7b">移动端</a>关于实习项目的移动端适配如何进行;如何获取到设备信息进行适配;如何使页面能够适配移动端
+                </li>
+                <li><a href="https://chat.openai.com/share/205bc2b6-d5ea-4c17-9c78-ddf29f2fd62c">性能优化</a>项目中性能优化有做过么*2
+                </li>
+
+                <h4>微前端</h4>
+                <li><a href="https://chat.openai.com/share/5a9626a0-fa67-409d-a8c4-0616876676a3">了解过微前端吗?</a>*2;</li>
+                <li>你有有做到微前端，能介绍一下微前端的一些东西嘛，说一下你的理解;</li>
+                <li>微前端有一些实现方式，能说一下你了解哪些方式去实现微前端的?;</li>
+                <li>你说的这个路由页面有啥区别?;</li>
+                <li>微前端的各种应用如何挂载有了解吗?;</li>
+
+                <h4>前端监控</h4>
+                <li><a
+                        href="https://chat.openai.com/share/88ff791b-50ae-44d3-8911-a84e6c86f09d">你对前端监控有了解吗</a>?几个回合下来原来想问UV
+                    这样的。;</li>
+                <li>权限控制这块你主要是控制哪一块内容?;</li>
+                <li>也就是有页面级的权限和功能权限;</li>
+                <li>前端是如何判断是否有页面权限和按钮权限的?;</li>
+                <li>具体到按钮是如何判断这个按钮是否显示呢?;</li>
+
+                <h4>others</h4>
+                <li><a href=""></a>项目中数据提交怎么做的，数据格式是什么</li>
+                <li><a href=""></a>在 Windows 下面文件改变了编码，会显示更改吗?Git 提交上去有提交的日志记录吗?</li>
+                <li><a href=""></a>竟然问了java 和springboot</li>
+                <li><a href=""></a>简述一下项目开发流程</li>
+                <li><a href="https://chat.openai.com/share/a7c63253-e8f0-45fa-a373-307f42bf4be5">对于前端工程化有什么理解</a></li>
+                <li><a href="https://chat.openai.com/share/91d8a9cb-2d8a-4099-85ac-f0d42e088f96">了解ts吗?说说泛型</a>;</li>
+                <li><a href=""></a>TS用过吗?泛型的概念知道不?;</li>
+                <li><a href=""></a>前端设计模式了解么</li>
+                <li><a href=""></a>手写发布订阅模式;订阅-发布模式，及其实现;</li>
+                <li><a href=""></a>一道技术逻辑题：不涉及具体的代码，现在有几千条存储在数据库中的数据想要在页面上分页显示，你认为前后端交互时双方应该给对方传递哪些参数。</li>
+                <li><a href=""></a>正则表达式</li>
+                <li><a href=""></a>SPA和MPA</li>
+                <li><a href=""></a>数据泄露，数据溢出</li>
+                <li><a href=""></a>怎么管理git分支的</li>
+                <li><a href=""></a>为什么要和后端了解数据库的设计</li>
+                <li><a href=""></a>平时怎么调试的，怎么打断点查出问题?</li>
+                <li><a
+                        href="https://chat.openai.com/share/e8796dbf-ad84-42a8-8090-340b67b94c4f">linux</a>了解吗?给了一些命令让说是啥意思
+                </li>
+
+                <h4>react</h4>
+                <li>react事件绑定</li>
+                <li>React-Router 是干什么的</li>
+                <li>react的jsx怎么转换成dom结构</li>
+                <li>有没有了解过react-hook</li>
+                <li>有没有了解过fiber</li>
+                <li>如何使用react hook来实现vue中的compute属性</li>
+                <li>解释一下React 为什么是单向数据流</li>
+                <li>自定义过哪些hooks</li>
+                <li>react类组件和函数组件的区别</li>
+                <li>useEffect的作用</li>
+                <li>了解React中的diff算法么(不太了解，两个类似)</li>
+            </ul>
+        </div>
+        <div>
+            <h1>代码算法</h1>
+            <ul>
+                <li>如何用js实现二叉树结构</li>
+                <li>算法：二叉树层序遍历</li>
+                <li>如何用js翻转二叉树</li>
+                <li>实现一个函数，能倒着打印等腰三角形;
+                    能不能一层for解决，我说不能，就算一层解决复杂度也不降低，new Array(5).fill('*')这样也没有降低复杂度吧?
+                </li>
+                <li>一道简单的算法题：正方形两条对角线上的元素是*星号，其他地方是空白，怎么输出*2</li>
+                <li>序号为1到n的小朋友围成圈(环)报数，每报到k的小朋友出列，下一个小朋友从1开始继续报数，求最后留下的小朋友初始序号</li>
+                <li>100元买100只鸡，1只公鸡5元，1只母鸡3元，3只小鸡1元，问公鸡、母鸡、小鸡各有多少，手写代码实现</li>
+                <li>怎么求2到8之间的随机数*2</li>
+                <li>按照输入数组属性a的值分组,说下思路,内部按照b数组的属性</li>
+                <li>有k个苹果和n层楼，k>=1, n>=1
+                    假设有某层f(0<=f<=n)，>f的楼层扔下来苹果会摔碎，<=f仍的苹果不会摔碎 每丢一次苹果算一次测试，如果苹果没摔碎可以在下一次测试时继续使用,问，最少丢几次可以确定f</li>
+                <li>汉诺塔问题知道吗?可以手写一下吗?</li>
+                <li>手写冒泡和快排，并尽量多写一些排序算法</li>
+            </ul>
+        </div>
+        <div>
+            <h1>其他类</h1>
+            <ul>
+                <li>职业规划*2</li>
+                <li>项目组有几个人、遇到问题如何解决</li>
+                <li>怎么学习前端、网上常用的资源*7</li>
+                <li>遇到过什么问题吗</li>
+                <li>最近有学习什么新技术吗*2</li>
+                <li>对前端开发工程师这一岗位的理解</li>
+                <li>先自我介绍一下吧*N</li>
+                <li>社会实践</li>
+                <li>如果有学弟向你询问如何学习前端会怎么回答</li>
+                <li>为什么选择前端*2</li>
+                <li>回顾笔试题，当时没写出来原因，现在写一下</li>
+                <li>确认信息，高考考多少?有无复读?那年的一本线是多少，大学有挂过科吗?</li>
+                <li>你家里人对你工作有什么期望吗?</li>
+                <li>从本科到研究生专业选择的想法?</li>
+                <li>你觉得自己做的最好的一件事?</li>
+                <li>你坚持最久的一件事?</li>
+                <li>作为一个前端开发者，你觉得自己比别人的优点是什么?</li>
+                <li>别人是怎么评价你的?</li>
+                <li>你身边有没有好的前端大牛来让你能看齐?或者你做什么能未来和他一样或者超过他?</li>
+                <li>第一份工作挺重要的，你怎么看待第一份工作(公司)?</li>
+                <li>你从哪些途径来了解这个公司的文化是不是想你说的那样，来选择公司?</li>
+                <li>你作为一个前端从业人员你觉得同行业有哪些前端产品做的比较优秀?</li>
+                <li>你会从哪个角度来评价前端产品做的比较好?</li>
+                <li>了解用友吗?为什么投了用友?*2</li>
+                <li>有投别的公司吗，投了哪些，收到offer了吗?</li>
+                <li>你意向的薪资?</li>
+                <li>第一个问题问校园经历</li>
+                <li>知乎专栏包括哪些部分</li>
+                <li>大学里最有成就感的事情</li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

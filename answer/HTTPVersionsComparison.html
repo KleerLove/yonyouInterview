@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP版本比较</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTTP版本比较</h1>
+
+    <h2>HTTP 1.0:</h2>
+    <p>
+        <ul>
+            <li><strong>连接管理：</strong> 每个请求/响应需要建立一个新的TCP连接。</li>
+            <li><strong>性能：</strong> 由于频繁建立连接，可能导致性能问题。</li>
+            <li><strong>不支持持久连接：</strong> 每个连接只处理一个请求和响应。</li>
+            <li><strong>头信息：</strong> 头信息较简单，不支持内容压缩等高级特性。</li>
+        </ul>
+    </p>
+
+    <h2>HTTP 1.1:</h2>
+    <p>
+        <ul>
+            <li><strong>持久连接：</strong> 引入了持久连接（Keep-Alive），允许在单个连接上传输多个请求和响应。</li>
+            <li><strong>管道化：</strong> 引入了管道化（Pipeline），可以在一个连接上同时发送多个请求，不需要等待前一个请求的响应。</li>
+            <li><strong>Host头部：</strong> 支持在同一个IP地址上承载多个域名，通过Host头部字段区分。</li>
+            <li><strong>缓存控制：</strong> 引入了更多的缓存控制机制，包括强制缓存和协商缓存。</li>
+        </ul>
+    </p>
+
+    <h2>HTTP 2.0:</h2>
+    <p>
+        <ul>
+            <li><strong>二进制格式：</strong> 与HTTP 1.x的文本格式不同，HTTP 2.0采用二进制格式进行数据传输，更加高效。</li>
+            <li><strong>多路复用：</strong> 允许在一个连接上同时发送多个请求，而不需要按顺序等待响应，提高了并发性能。</li>
+            <li><strong>头部压缩：</strong> 使用HPACK算法对头部进行压缩，减少了数据传输的大小。</li>
+            <li><strong>服务器推送：</strong> 服务器可以在客户端请求之前推送数据，提高性能。</li>
+            <li><strong>流控制：</strong> 支持流控制，防止一个流的数据过多导致其他流的阻塞。</li>
+            <li><strong>优化性能：</strong> 通过各种优化手段，如减少不必要的头部信息、优化首字节加载等，提高性能。</li>
+        </ul>
+    </p>
+    <p>总体而言 ，HTTP 2.0相对于HTTP 1.1有许多性能和效率上的改进，而HTTP 1.1相对于HTTP 1.0则是在连接管理和性能上有所提升。新版本的HTTP通常都致力于提高性能、减少延迟，并支持更多的功能。</p>
+</body>
+</html>

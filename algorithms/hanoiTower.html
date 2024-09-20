@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hanoiTower(discs, source, auxiliary, target) {
+            if (discs === 1) {
+                console.log(`Move disc 1 from ${source} to ${target}`);
+            } else {
+                hanoiTower(discs - 1, source, target, auxiliary);
+                console.log(`Move disc ${discs} from ${source} to ${target}`);
+                hanoiTower(discs - 1, auxiliary, source, target);
+            }
+        }
+
+        // 示例用法
+        hanoiTower(3, 'A', 'B', 'C');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

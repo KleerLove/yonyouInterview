@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generateRandomNumber(n, m) {
+            // 确保 n 和 m 都是整数
+            n = Math.ceil(n);
+            m = Math.floor(m);
+
+            // 生成 n 到 m 之间的随机整数（包括 n 和 m）
+            return Math.floor(Math.random() * (m - n + 1)) + n;
+        }
+
+        // 例子：生成 1 到 10 之间的随机数
+        var randomNumber = generateRandomNumber(1, 10);
+        console.log(randomNumber);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
